@@ -1,0 +1,70 @@
+@import '../../../styles/settings.scss';
+
+.box {
+    width: 40vw;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        height: 100%;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    p {
+        padding: 5% 0;
+        font-size: 50px;
+    }
+}
+.boxOne {
+    animation: boxOpacity 10s 1s;
+    &::after {
+        animation: borderOne 10s 2s;
+    }
+}
+.boxTwo {
+    animation: boxOpacityTwo 5s 12s forwards;
+    &::after {
+        animation: borderTwo 5s 13s forwards;
+    }
+
+}
+
+@keyframes boxOpacity {
+    25% {
+        opacity: 1;
+    }
+    75%{ 
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+};
+
+@keyframes boxOpacityTwo {
+    100% {
+        opacity: 1;
+    }
+};
+
+@keyframes borderOne {
+    50% {
+        left: 35%;
+        right: 35%;
+    }
+}
+
+@keyframes borderTwo {
+    100% {
+        left: 35%;
+        right: 35%;
+    }
+}
