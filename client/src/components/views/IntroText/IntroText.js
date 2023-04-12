@@ -2,7 +2,9 @@ import Button from '../../common/Button/Button';
 import styles from './IntroText.module.scss';
 import clsx from 'clsx';
 
-const IntroText = () => {
+
+const IntroText = (props) => {
+  
     return(
         <>
         <div className={clsx(styles.box, styles.boxOne)}>
@@ -10,7 +12,7 @@ const IntroText = () => {
         </div>
         <div className={clsx(styles.box, styles.boxTwo)}>
             <p>Just breath and click at the button.</p>
-            <Button name="click"/>
+            <Button action= {props.actionBtn} name="click"/>
         </div>
         </>
     )

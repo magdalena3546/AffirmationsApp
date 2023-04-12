@@ -11,7 +11,8 @@ body {
     color: #fff;
     font-size: 40px;
     background-color: #FAACA8;
-    background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
+    background-image: linear-gradient(90deg, #FAACA8, #DDD6F3, #6f99a8);
+    background-size: 400% 400%;
     // background-color: #8BC6EC;
     // background-image: linear-gradient(90deg, #8BC6EC 0%, #9599E2 100%);
     // background: rgb(238,174,202);
@@ -23,8 +24,42 @@ body {
     // background-image: linear-gradient(to right, #4371c6, #6d77cf, #907cd6, #af81da, #cd86dc, #e286d1, #f387c4, #ff8bb8, #ff909e, #ff9b84, #ffab6e, #fbbe5f);
 }
 
+.blue {
+    animation: changeBgc 15s forwards;
+    // background: #804e9c;
+    // background-image: linear-gradient(90deg, #DDD6F3 0%, #6f99a8 100%);
+}
+@keyframes changeBgc {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
 .container {
     height: 100vh;
     padding: 10%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.moon {
+    // width: 15rem;
+    // height: 15rem;
+    // border-radius: 50%;
+    // box-shadow: 2rem 2rem 0 0 #fff;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    // transform: translate(-50%, -50%);
+    
+     height: 100px;
+     width: 100px;
+     box-shadow: 15px 15px 2px 5px white;
+     border-radius: 50%;
 }
