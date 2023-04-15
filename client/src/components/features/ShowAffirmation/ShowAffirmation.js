@@ -1,17 +1,24 @@
-import Affirmation from "../../views/IntroText/Affirmation/Affirmation";
+import Affirmation from "../../views/Affirmation/Affirmation";
 import IntroText from "../../views/IntroText/IntroText";
 import { useState } from "react";
+import { API_URL } from "../../../config";
 
 const ShowAffirmation = () => {
     const [showAffirmation, setShowAffirmation] = useState(false);
+    const [text, setText] = useState('');
     const actionBtn = () => {
-        document.body.classList.add('blue');
-        setShowAffirmation(true);
+        fetch(`${API_URL}/affirmation`)
+        .then(res => res.json())
+        .then(elm => {
+            setText(elm[0].content);
+            document.body.classList.add('blue');
+            setShowAffirmation(true);
+        })
     };
     return(
         <>
         {!showAffirmation &&<IntroText actionBtn={actionBtn}/>}
-        {showAffirmation && <Affirmation />}
+        {(showAffirmation) && <Affirmation text={text} />}
         </>
     );
 };
