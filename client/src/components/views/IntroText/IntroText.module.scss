@@ -6,7 +6,7 @@
     opacity: 0;
     p {
         padding: 5% 0;
-        font-size: 50px;
+        font-size: 1.2em;
     }
 }
 .boxOne {
@@ -52,5 +52,13 @@
     100% {
         left: 35%;
         right: 35%;
+    }
+}
+
+@media (max-width: 900px){
+    .box {
+        p {
+            font-size: .9em;
+        }
     }
 }

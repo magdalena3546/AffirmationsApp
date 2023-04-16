@@ -6,7 +6,6 @@
     font-family: $font_btn;
     color: #fff;
     background: linear-gradient(to right, #fc5c7d, #6a82fb);
-    // linear-gradient(to right, #8360c3, #2ebf91);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     font-size: 30px;
@@ -16,9 +15,6 @@
     overflow: hidden;
     z-index: 1;
     transition: .3s;
-    &::nth-child(1){
-        color: red;
-    }
     &::after {
         content: '';
         position: absolute;
@@ -36,5 +32,14 @@
     }
     &:hover::after{
         left: 160%;
+    }
+}
+
+@media (max-width: 900px){
+    .btn {
+        font-size: .7em;
+        &::after {
+            display: none;
+        }
     }
 }

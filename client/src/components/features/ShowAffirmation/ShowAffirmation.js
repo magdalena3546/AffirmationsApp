@@ -5,6 +5,7 @@ import { API_URL } from "../../../config";
 
 const ShowAffirmation = () => {
     const [showAffirmation, setShowAffirmation] = useState(false);
+    const [showStars, setShowStars] = useState(false);
     const [text, setText] = useState('');
     const actionBtn = () => {
         fetch(`${API_URL}/affirmation`)
@@ -15,10 +16,20 @@ const ShowAffirmation = () => {
             setShowAffirmation(true);
         })
     };
+
+    const actionBtnAff = () => {
+        fetch(`${API_URL}/affirmation`)
+        .then(res => res.json())
+        .then(elm => {
+            setText(elm[0].content);
+            setShowStars(true);
+        })
+        setShowStars(false);
+    };
     return(
         <>
         {!showAffirmation &&<IntroText actionBtn={actionBtn}/>}
-        {(showAffirmation) && <Affirmation text={text} />}
+        {(showAffirmation) && <Affirmation  text={text} actionBtn={actionBtnAff} showStars={showStars}/>}
         </>
     );
 };

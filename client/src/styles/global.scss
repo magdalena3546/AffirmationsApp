@@ -13,22 +13,12 @@ body {
     background-color: #FAACA8;
     background-image: linear-gradient(90deg, #FAACA8, #DDD6F3, #6f99a8);
     background-size: 400% 400%;
-    // background-color: #8BC6EC;
-    // background-image: linear-gradient(90deg, #8BC6EC 0%, #9599E2 100%);
-    // background: rgb(238,174,202);
-    // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    // background-color: #FBAB7E;
-    // background-image: linear-gradient(90deg, #FBAB7E 0%, #F7CE68 100%);
-    // background-color: #FAACA8;
-    // background-image: linear-gradient(90deg, #FAACA8 0%, #DDD6F3 100%);
-    // background-image: linear-gradient(to right, #4371c6, #6d77cf, #907cd6, #af81da, #cd86dc, #e286d1, #f387c4, #ff8bb8, #ff909e, #ff9b84, #ffab6e, #fbbe5f);
 }
 
 .blue {
     animation: changeBgc 15s forwards;
-    // background: #804e9c;
-    // background-image: linear-gradient(90deg, #DDD6F3 0%, #6f99a8 100%);
 }
+
 @keyframes changeBgc {
 	0% {
 		background-position: 0% 50%;
@@ -45,4 +35,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }

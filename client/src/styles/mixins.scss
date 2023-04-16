@@ -16,4 +16,10 @@
         border-bottom: 1px solid #fff;
     }
 
+    @media (max-width: 900px) and (orientation: portrait){
+        width: 90vw;
+    }
+    @media (max-width: 900px) and (orientation: landscape){
+        width: 70vw;
+    }
 };
