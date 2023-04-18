@@ -1,6 +1,6 @@
 # AffirmationsApp
 
-Simple page for help you to deal with anxiety.
+Simple page for help you to deal with anxiety :blossom:
 
 ---
 
