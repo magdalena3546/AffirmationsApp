@@ -15,6 +15,7 @@ Here is demo: https://affirmationsapp.magdalena3546.repl.co
 - ![Sass](https://img.shields.io/badge/-Sass-black?style=flat-square&logo=Sass&logoColor=pink)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
 - ![Express](https://img.shields.io/badge/-Express-black?style=flat-square&logo=express)
+- ![NodeJS](https://img.shields.io/badge/-NodeJS-black?style=flat-square&logo=nodejs)
 
 ---
 
